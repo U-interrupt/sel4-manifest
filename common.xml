@@ -8,7 +8,7 @@
 
 <remote name="seL4" fetch="https://github.com/seL4"/>
 <remote name="nanopb" fetch="https://github.com/nanopb"/>
-<remote name="uintr" fetch="https://github.com/U-interrupt">
+<remote name="uintr" fetch="."/>
 
 <default revision="master" remote="seL4"/>
 
