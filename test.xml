@@ -6,8 +6,11 @@
 -->
 <manifest>
 
-<!-- include all the common repositories, we just want to define the kernel -->
 <include name="common.xml"/>
+
+<project name="sel4test.git" path="projects/sel4test">
+    <linkfile src="easy-settings.cmake" dest="easy-settings.cmake"/>
+</project>
 
 <project name="seL4.git" path="kernel" remote="uintr"/>
 

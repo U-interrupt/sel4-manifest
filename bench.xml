@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright 2018, Data61, CSIRO
+
+     SPDX-License-Identifier: BSD-2-Clause
+-->
+<manifest>
+
+<include name="common.xml"/>
+
+<project name="sel4bench.git" path="projects/sel4bench">
+    <linkfile src="easy-settings.cmake" dest="easy-settings.cmake"/>
+</project>
+
+<project name="seL4.git" path="kernel" remote="uintr"/>
+
+</manifest>
