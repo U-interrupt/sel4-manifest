@@ -12,6 +12,7 @@
 <project name="sel4bench.git" path="projects/sel4bench">
     <linkfile src="easy-settings.cmake" dest="easy-settings.cmake"/>
 </project>
+<project name="nanopb" path="nanopb" revision="refs/tags/0.4.3" upstream="master" remote="nanopb"/>
 
 <project name="seL4.git" path="kernel" remote="uintr"/>
 
