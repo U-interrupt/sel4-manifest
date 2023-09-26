@@ -28,18 +28,17 @@ sel4service-manifest
 Manifest of the sel4service project, which runs sqlite3 benchmark with xv6 fs server and ramdisk server.
 
 ```sh
-mkdir sel4service-manifest
-cd sel4service-manifest
+mkdir sel4service-manifest && cd sel4service-manifest
 repo init -u https://github.com/U-interrupt/sel4-manifest.git -m service.xml
 repo sync
 
 # Run on QEMU
-mkdir build
+mkdir build && cd build
 ../init-build.sh -DPLATFORM=qemu-riscv-virt -DQEMU_BINARY=<Your path to QEMU> -DSIMULATION=1 -DQEMU_MEMORY=2g -DLibSel4MuslcSysMorecoreBytes=1048576 -DNUM_NODES=4 -DLibSel4UtilsStackSize=262144 -DUINTR=1 -DSMP=1
 <Your path to QEMU> -machine virt -cpu rv64 -nographic -m size=2g -smp 4 -bios none -kernel images/sel4service-rootserver-image-riscv-qemu-riscv-virt
 
 # Build image for Rocket Chip
-mkdir build-rocket
+mkdir build-rocket && cd build-rocket
 ../init-build.sh -DPLATFORM=rocketchip -DRISCV64=1 -DLibSel4MuslcSysMorecoreBytes=1048576 -DNUM_NODES=4 -DLibSel4UtilsStackSize=262144 -DUINTR=1 -DSMP=1
 ls -lh images
 ```
